@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"
+              android:layout_width="match_parent" android:background="#fff" android:layout_height="match_parent" >
+
+    <!--header-->
+    <LinearLayout android:layout_width="match_parent" android:orientation="horizontal" android:layout_height="50dp" android:background="#ff2" android:gravity="center" >
+       <TextView android:id="@+id/setting_tab"  android:layout_width="0dp" android:layout_weight="1" android:gravity="center"  android:layout_height="match_parent" android:text="filter" android:textColor="#000"/>
+        <LinearLayout android:layout_height="40dp" android:layout_width="1dp" android:background="#aaa" />
+        <TextView android:id="@+id/list_tab"  android:layout_width="0dp" android:layout_weight="1" android:gravity="center"  android:layout_height="match_parent" android:text="List" android:textColor="#000"/>
+
+    </LinearLayout>
+    <!--end header-->
+
+    <!--url -->
+     <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center">
+         <ProgressBar android:id="@+id/progressBarr" android:visibility="invisible" android:layout_height="20dp" android:layout_width="20dp"/>
+         <TextView android:id="@+id/progressBarrString"  android:editable="false" android:text="http://" android:layout_height="wrap_content" android:textSize="9dp" android:layout_width="0dp" android:layout_weight="1" />
+     </LinearLayout>
+    <!--url -->
+
+
+    <!--setting-->
+     <LinearLayout android:id="@+id/setting_view" android:orientation="vertical" android:layout_height="match_parent" android:layout_width="match_parent">
+
+     <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+
+    <Button android:id="@+id/request" android:layout_height="50dp" android:layout_width="80dp" android:text="request" android:layout_margin="5dp" />
+      <!--Maxitems -->
+      <LinearLayout android:layout_height="50dp" android:orientation="horizontal" android:layout_width="match_parent">
+          <TextView  android:text="Maxitems: " android:textColor="#000" android:layout_height="wrap_content" android:layout_width="0dp" android:layout_weight="1" android:gravity="right" />
+          <EditText android:id="@+id/maxitems" android:text="10" android:layout_marginRight="10dp" android:inputType="number" android:layout_height="wrap_content" android:layout_width="0dp" android:layout_weight="1" android:gravity="left" />
+      </LinearLayout>
+      <!--end Maxitems -->
+         <!--page -->
+         <LinearLayout android:layout_height="50dp" android:orientation="horizontal" android:layout_width="match_parent">
+             <TextView  android:text="Page: " android:textColor="#000" android:layout_height="wrap_content" android:layout_width="0dp" android:layout_weight="1" android:gravity="right" />
+             <EditText android:id="@+id/page" android:text="1" android:layout_marginRight="10dp" android:inputType="number" android:layout_height="wrap_content" android:layout_width="0dp" android:layout_weight="1" android:gravity="left" />
+         </LinearLayout>
+         <!--end page -->
+
+         <!--sort-->
+         <LinearLayout android:layout_height="wrap_content" android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent">
+             <TextView  android:text="Sort: " android:textColor="#000" android:layout_height="wrap_content" android:layout_width="0dp" android:layout_weight="1" android:gravity="right" />
+             <Spinner android:id="@+id/sortSpinner" android:layout_height="wrap_content"   android:layout_width="0dp" android:layout_weight="2" android:layout_margin="10dp" />
+         </LinearLayout>
+
+         <!--end sort-->
+
+         <!--dir-->
+         <LinearLayout android:layout_height="wrap_content" android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent">
+             <TextView  android:text="Dir: " android:textColor="#000" android:layout_height="wrap_content" android:layout_width="0dp" android:layout_weight="1" android:gravity="right" />
+            <Spinner android:id="@+id/dirSpinner"  android:layout_height="wrap_content"  android:layout_width="0dp" android:layout_weight="2" android:layout_margin="10dp" />
+
+         </LinearLayout>
+         <!--end dir-->
+
+         </LinearLayout>
+     </ScrollView>
+     </LinearLayout>
+    <!--end setting-->
+
+
+    <!--list-->
+    <ScrollView android:id="@+id/list_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" >
+        <LinearLayout android:orientation="vertical" android:background="#000" android:id="@+id/scrollContent" android:layout_width="match_parent" android:layout_height="wrap_content" >
+            <TextView android:background="#fff" android:gravity="center" android:textColor="#000" android:text="List is empty. \nPlease start from filter tab to make request!" android:layout_width="match_parent" android:layout_height="100dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--end list-->
+</LinearLayout>
+
